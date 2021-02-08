@@ -1,0 +1,38 @@
+@import config
+@import "blocks/**/*"
+
+/*===== HOME =====*/
+.home
+  background-color: #000000
+  overflow: hidden
+  &__container
+    position: relative
+    height: calc( 100vh - $header-height )
+    grid-template-rows: repeat( 2, max-content )
+    align-content: space-around
+    row-gap: 2rem
+  &__data
+    border-left: 4px solid $first-color-lighten
+    color: $first-color-lighten
+    padding-left: 1.5rem
+    z-index: $z-tooltip
+  &__name
+    font-size: $biggest-font-size
+  &__greeting, &__profession
+    display: block
+    font-weight: 700
+  &__greeting
+    font-size: .813rem
+  &__profession
+    font-size: .938rem
+    margin-bottom: $mb-3
+  &__social
+    display: flex
+    flex-direction: column
+    &-icon
+      width: max-content
+      font-size: 1.3rem
+      margin-bottom: $mb-2
+      color: $first-color-lighten
+      &:hover
+        color: $first-color-light

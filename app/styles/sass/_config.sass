@@ -1,0 +1,127 @@
+// USER VARIABLES SECTION
+
+// ===== Color ===== //
+$first-color: #3E0E12 // First Color
+$first-color-dark: #2F0A0D // First Color Dark
+$first-color-light: #7B6F71 // First Color Light
+$first-color-lighten: #FBF9F9 // First Color Lighten
+$text-color: #524748 // Text Color
+
+// ===== Typography ===== //
+$biggest-font-size: 2.5rem
+$normal-font-size: .938rem
+$small-font-size: .813rem
+$smaller-font-size: .75rem
+$h1-font-size: 2.5rem
+$h2-font-size: 1.25rem
+$h3-font-size: 1.125rem
+$h3-font-size: 1.125rem
+$lineheight: 1.6 // Document Line Height
+$userfont: centuryGothic, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// ===== Margenes ===== //
+$header-height: 3rem
+$mb-1: .5rem
+$mb-2: 1rem
+$mb-3: 1.5rem
+$mb-4: 2rem
+$mb-5: 2.5rem
+$mb-6: 3rem
+
+// ===== z-index ===== //
+$z-normal: 1
+$z-tooltip: 10
+$z-fixed: 100
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+// @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+@import 'node_modules/boxicons/css/boxicons'
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('centuryGothic', normal, 400, '../fonts/CenturyGothic.woff2')
+@include font('centuryGothic', normal, 700, '../fonts/CenturyGothic-Bold.woff2')
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $first-color
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+html
+	scroll-behavior: smooth
+
+body
+	margin: $header-height 0 0 0
+	font-family: $userfont
+	font-size: $normal-font-size
+	background-color: $first-color-lighten
+	line-height: $lineheight
+	color: $text-color
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+
+h1,h2,h3,ul,p
+	margin: 0
+
+h2,h3
+	font-weight: 700
+
+ul
+	padding: 0
+	list-style: none
+
+a
+	text-decoration: none
+
+img
+	max-width: 100%
+	height: auto
+	display: block
+
+.section
+	padding: 4rem 0 2rem
+
+.section-title, .section-subtitle
+	text-align: center
+
+.section-title
+	font-size: $h1-font-size
+	color: $first-color
+	margin-bottom: $mb-3
+
+.section-subtitle
+	display: block
+	font-size: $smaller-font-size
+	font-weight: 700
+
+*,::before,::after
+	box-sizing: border-box
+
+
