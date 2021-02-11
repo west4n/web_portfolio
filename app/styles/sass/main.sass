@@ -36,3 +36,87 @@
       color: $first-color-lighten
       &:hover
         color: $first-color-light
+
+/*===== ABOUT =====*/
+.about
+  &__data
+    text-align: center
+  &__description span
+    font-size: $h2-font-size
+    font-weight: 700
+    color: $first-color
+  &__number
+    font-size: $h1-font-size
+    color: $first-color
+    display: block
+  &__img
+    justify-self: center
+    width: 220px
+    border-radius: .5rem
+    
+/*===== QUALIFICATION =====*/
+.qualification
+  &__container
+    row-gap: 2.5rem
+  &__title
+    font-size: $h3-font-size
+    color: $first-color
+    margin-bottom: $mb-2
+    display: flex
+    align-items: center
+    &-icon
+      font-size: 1.5rem
+      margin-right: $mb-1
+  &__box
+    padding-bottom: 1rem
+    border-bottom: 1px solid #ccc
+  &__area
+    font-size: $normal-font-size
+    color: $first-color
+    margin-bottom: $mb-1
+    font-weight: 400
+  &__icon, &__work
+    font-size: $smaller-font-size
+    color: $first-color-light
+  &__work
+    display: block
+
+/*===== SERVICES =====*/
+.services
+  &__data
+    padding: 3rem 1rem
+    background-color: #fff
+    border-radius: .5rem
+    text-align: center
+    transition: .4s
+    box-shadow: 0 4px 6px rgba(174, 190, 205, .3)
+    &:hover
+      transform: translateY(-.5rem)
+      box-shadow: 0 6px 8px rgba(174, 190, 205, .4)
+  &__icon, &__title
+    margin-bottom: $mb-2
+    color: $first-color
+  &__icon
+    font-size: 3rem
+  &__title
+    font-size: $h3-font-size
+  &__description
+    margin-bottom: $mb-4
+
+/*===== PROJECT IN MIND =====*/
+.project
+  &__container
+    padding: 1.5rem 1rem
+    background-color: $first-color-dark
+    color: $first-color-lighten
+    border-radius: .5rem
+    text-align: center
+  &__icon, &__title
+    margin-bottom: $mb-1
+  &__icon
+    font-size: 3.5rem
+  &__title
+    font-size: 1.5rem
+  &__description
+    margin-bottom: $mb-4
+    
